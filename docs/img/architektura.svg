@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" font-family="Segoe UI, Arial, sans-serif" role="img" aria-label="Architektura systemu">
+  
+<defs>
+  <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M1 1 L9 5 L1 9 Z" fill="#3B82F6"/>
+  </marker>
+</defs>
+  <!-- użytkownik -->
+  <rect x="20" y="150" width="130" height="70" rx="14" fill="#F1F5F9" stroke="#94A3B8"/>
+  <text x="85" y="180" text-anchor="middle" font-size="14" font-weight="700" fill="#0A2540">Użytkownik</text>
+  <text x="85" y="199" text-anchor="middle" font-size="12" fill="#4a5b70">przeglądarka</text>
+
+  <!-- interfejs -->
+  <rect x="190" y="40" width="200" height="260" rx="18" fill="#EFF6FF" stroke="#3B82F6" stroke-dasharray="6 4"/>
+  <text x="206" y="64" font-size="13" font-weight="700" fill="#1D4ED8">INTERFEJS · Streamlit</text>
+  <g font-size="13">
+    <rect x="205" y="80" width="170" height="50" rx="12" fill="#fff" stroke="#93C5FD"/>
+    <text x="290" y="102" text-anchor="middle" font-weight="700" fill="#0A2540">app.py</text>
+    <text x="290" y="119" text-anchor="middle" font-size="11.5" fill="#4a5b70">nawigacja, logo, motyw</text>
+    <rect x="205" y="145" width="170" height="50" rx="12" fill="#fff" stroke="#93C5FD"/>
+    <text x="290" y="167" text-anchor="middle" font-weight="700" fill="#0A2540">generator.py</text>
+    <text x="290" y="184" text-anchor="middle" font-size="11.5" fill="#4a5b70">fiszki, nauka, Wyjaśnij</text>
+    <rect x="205" y="210" width="170" height="50" rx="12" fill="#fff" stroke="#93C5FD"/>
+    <text x="290" y="232" text-anchor="middle" font-weight="700" fill="#0A2540">docs.py</text>
+    <text x="290" y="249" text-anchor="middle" font-size="11.5" fill="#4a5b70">dokumentacja i diagramy</text>
+  </g>
+
+  <!-- logika: fiszki -->
+  <rect x="430" y="40" width="220" height="260" rx="18" fill="#0A2540"/>
+  <text x="446" y="64" font-size="13" font-weight="700" fill="#93C5FD">LOGIKA · flashcards.py</text>
+  <g font-family="Consolas, monospace" font-size="12.5" fill="#E0F2FE">
+    <rect x="446" y="76" width="188" height="30" rx="8" fill="#123A66"/><text x="458" y="96">load_text()</text>
+    <rect x="446" y="113" width="188" height="30" rx="8" fill="#123A66"/><text x="458" y="133">split_into_chunks()</text>
+    <rect x="446" y="150" width="188" height="30" rx="8" fill="#1D4ED8"/><text x="458" y="170">flashcards_from_chunk()</text>
+    <rect x="446" y="187" width="188" height="30" rx="8" fill="#123A66"/><text x="458" y="207">deduplicate()</text>
+    <rect x="446" y="224" width="188" height="30" rx="8" fill="#1D4ED8"/><text x="458" y="244">review()</text>
+    <rect x="446" y="261" width="188" height="30" rx="8" fill="#123A66"/><text x="458" y="281">export_anki/csv()</text>
+  </g>
+
+  <!-- logika: RAG -->
+  <rect x="430" y="320" width="220" height="120" rx="18" fill="#0A2540"/>
+  <text x="446" y="344" font-size="13" font-weight="700" fill="#67E8F9">RAG · rag.py</text>
+  <g font-family="Consolas, monospace" font-size="12.5" fill="#E0F2FE">
+    <rect x="446" y="356" width="188" height="30" rx="8" fill="#0E7490"/><text x="458" y="376">Index.build/search()</text>
+    <rect x="446" y="393" width="188" height="30" rx="8" fill="#1D4ED8"/><text x="458" y="413">explain()</text>
+  </g>
+
+  <!-- ollama i modele -->
+  <rect x="690" y="110" width="120" height="220" rx="16" fill="#1D4ED8"/>
+  <text x="750" y="200" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">Ollama</text>
+  <text x="750" y="221" text-anchor="middle" font-size="11.5" fill="#BFDBFE" font-family="Consolas, monospace">localhost:11434</text>
+  <text x="750" y="241" text-anchor="middle" font-size="11" fill="#BFDBFE">lokalnie, offline</text>
+  <rect x="840" y="95" width="105" height="56" rx="12" fill="#fff" stroke="#3B82F6"/>
+  <text x="892" y="120" text-anchor="middle" font-size="13" font-weight="700" fill="#0A2540" font-family="Consolas, monospace">qwen2.5:3b</text>
+  <text x="892" y="138" text-anchor="middle" font-size="11" fill="#4a5b70">model językowy</text>
+  <rect x="840" y="165" width="105" height="56" rx="12" fill="#fff" stroke="#3B82F6"/>
+  <text x="892" y="190" text-anchor="middle" font-size="13" font-weight="700" fill="#0A2540" font-family="Consolas, monospace">qwen2.5:7b</text>
+  <text x="892" y="208" text-anchor="middle" font-size="11" fill="#4a5b70">lub dokładniejszy</text>
+  <rect x="840" y="265" width="105" height="56" rx="12" fill="#ECFEFF" stroke="#22D3EE"/>
+  <text x="892" y="290" text-anchor="middle" font-size="13" font-weight="700" fill="#0A2540" font-family="Consolas, monospace">bge-m3</text>
+  <text x="892" y="308" text-anchor="middle" font-size="11" fill="#0E7490">embeddingi</text>
+
+  <!-- pliki -->
+  <rect x="190" y="345" width="95" height="50" rx="12" fill="#F1F5F9" stroke="#94A3B8"/>
+  <text x="237" y="366" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A2540">Wejście</text>
+  <text x="237" y="383" text-anchor="middle" font-size="11" fill="#4a5b70">.txt .docx .pdf</text>
+  <rect x="295" y="345" width="95" height="50" rx="12" fill="#ECFEFF" stroke="#22D3EE"/>
+  <text x="342" y="366" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A2540">Eksport</text>
+  <text x="342" y="383" text-anchor="middle" font-size="11" fill="#4a5b70">Anki · CSV</text>
+
+  <!-- połączenia -->
+  <g stroke="#3B82F6" stroke-width="2.5" fill="none">
+    <line x1="150" y1="185" x2="186" y2="185" marker-end="url(#ar)" marker-start="url(#ar)"/>
+    <line x1="390" y1="170" x2="426" y2="170" marker-end="url(#ar)"/>
+    <path d="M390 275 L410 275 L410 380 L426 380" marker-end="url(#ar)"/>
+    <line x1="650" y1="165" x2="686" y2="165" marker-end="url(#ar)" marker-start="url(#ar)"/>
+    <path d="M650 380 L670 380 L670 300 L686 300" marker-end="url(#ar)"/>
+    <line x1="810" y1="135" x2="836" y2="123" marker-end="url(#ar)"/>
+    <line x1="810" y1="193" x2="836" y2="193" marker-end="url(#ar)"/>
+    <line x1="810" y1="285" x2="836" y2="293" marker-end="url(#ar)"/>
+    <line x1="237" y1="345" x2="237" y2="304" marker-end="url(#ar)"/>
+    <line x1="342" y1="300" x2="342" y2="341" marker-end="url(#ar)"/>
+  </g>
+  <text x="668" y="155" text-anchor="middle" font-size="11" fill="#1D4ED8">HTTP</text>
+</svg>

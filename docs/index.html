@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ATLAS - Agents That Learn, Act &amp; Solve</title>
+  <meta name="description" content="ATLAS: portfolio projektów z modelami językowymi, modelami multimodalnymi i agentami AI.">
+  <link rel="icon" href="img/atlas_icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="nav">
+    <a class="brand" href="index.html"><img src="img/atlas_icon.svg" alt="">ATLAS</a>
+    <div class="links">
+      <a class="active" href="index.html">Portfolio</a>
+      <a href="flashcards.html">Flashcards</a>
+      <a href="https://github.com/juliuszlosinski/ATLAS">GitHub</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <div class="kicker">// Agents That Learn, Act &amp; Solve</div>
+      <h1>Projekty z <span class="hl">modelami językowymi</span> i agentami AI</h1>
+      <p class="lead">ATLAS to seria projektów, które pokazują praktyczne zastosowania LLM: od pojedynczego agenta
+        z lokalnym modelem, przez RAG, po systemy wieloagentowe i modele multimodalne. Każdy projekt działa
+        i ma dokumentację z diagramami.</p>
+      <ul class="tags">
+        <li>LLM</li><li>RAG</li><li>agenci AI</li><li>Ollama</li><li>Python</li><li>Streamlit</li>
+      </ul>
+      <a class="btn" href="#projekty">Zobacz projekty</a>
+      <a class="btn ghost" href="https://github.com/juliuszlosinski/ATLAS">Kod na GitHubie</a>
+    </div>
+    <img class="logo" src="img/atlas_icon.svg" alt="Logo ATLAS: cztery połączone roboty na siatce">
+  </header>
+
+  <section id="projekty">
+    <h2>Projekty</h2>
+    <p class="sub">Każdy projekt to osobny folder w repozytorium, z kodem, testami i instrukcją uruchomienia.</p>
+    <div class="grid">
+      <a class="card project" href="flashcards.html">
+        <img src="img/app_generator.png" alt="Zrzut ekranu aplikacji ATLAS Flashcards">
+        <span class="status">● gotowy</span>
+        <h3>ATLAS Flashcards</h3>
+        <p>Fiszki do nauki z własnych materiałów, generowane lokalnym modelem Qwen 2.5 przez Ollamę.
+          Ocena jakości przez LLM-as-judge, wyjaśnienia z RAG, eksport do Anki.</p>
+      </a>
+      <div class="card project soon">
+        <span class="status">○ w przygotowaniu</span>
+        <h3>Kolejny agent</h3>
+        <p>Agent korzystający z narzędzi (tool calling) i pamięci. Szczegóły wkrótce.</p>
+      </div>
+      <div class="card project soon">
+        <span class="status">○ w przygotowaniu</span>
+        <h3>System wieloagentowy</h3>
+        <p>Kilku współpracujących agentów z orkiestracją. Szczegóły wkrótce.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Co pokazują te projekty</h2>
+    <p class="sub">Umiejętności, które rozwijam w kolejnych projektach ATLAS.</p>
+    <div class="grid">
+      <div class="card"><div class="num">01</div><h3>Modele lokalne</h3>
+        <p>Uruchamianie modeli przez Ollamę, dobór modelu do zadania i sprzętu, praca bez chmury.</p></div>
+      <div class="card"><div class="num">02</div><h3>Ustrukturyzowane wyjście</h3>
+        <p>Schematy Pydantic przekazywane do modelu, walidacja odpowiedzi w formacie JSON.</p></div>
+      <div class="card"><div class="num">03</div><h3>RAG</h3>
+        <p>Embeddingi, wyszukiwanie po znaczeniu i odpowiedzi oparte na źródłach z cytowaniem fragmentów.</p></div>
+      <div class="card"><div class="num">04</div><h3>Ocena jakości</h3>
+        <p>LLM-as-judge, progi jakości, deduplikacja i testy jednostkowe z atrapą modelu.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>ATLAS · Agents That Learn, Act &amp; Solve</span>
+    <span>Juliusz Łosiński · <a href="https://github.com/juliuszlosinski">github.com/juliuszlosinski</a></span>
+  </footer>
+</div>
+</body>
+</html>

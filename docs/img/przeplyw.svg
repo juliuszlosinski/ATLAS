@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 250" font-family="Segoe UI, Arial, sans-serif" role="img" aria-label="Przepływ danych">
+  
+<defs>
+  <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M1 1 L9 5 L1 9 Z" fill="#3B82F6"/>
+  </marker>
+</defs>
+  
+  <rect x="16" y="40" width="118" height="78" rx="14" fill="#F1F5F9" stroke="#94A3B8"/>
+  <circle cx="36" cy="40" r="13" fill="#0A2540"/>
+  <text x="36" y="45" text-anchor="middle" font-size="12" font-weight="700" fill="#22D3EE">1</text>
+  <text x="75" y="78" text-anchor="middle" font-size="14" font-weight="700" fill="#0A2540">Wczytanie</text>
+  <text x="75" y="98" text-anchor="middle" font-size="11" fill="#4a5b70">.txt · .docx · .pdf</text><line x1="136" y1="79" x2="147" y2="79" stroke="#3B82F6" stroke-width="2.5" marker-end="url(#ar)"/>
+  <rect x="150" y="40" width="118" height="78" rx="14" fill="#F1F5F9" stroke="#94A3B8"/>
+  <circle cx="170" cy="40" r="13" fill="#0A2540"/>
+  <text x="170" y="45" text-anchor="middle" font-size="12" font-weight="700" fill="#22D3EE">2</text>
+  <text x="209" y="78" text-anchor="middle" font-size="14" font-weight="700" fill="#0A2540">Podział</text>
+  <text x="209" y="98" text-anchor="middle" font-size="11" fill="#4a5b70">fragmenty ≤ 2500 zn.</text><line x1="270" y1="79" x2="281" y2="79" stroke="#3B82F6" stroke-width="2.5" marker-end="url(#ar)"/>
+  <rect x="284" y="40" width="118" height="78" rx="14" fill="#1D4ED8" stroke="#1D4ED8"/>
+  <circle cx="304" cy="40" r="13" fill="#0A2540"/>
+  <text x="304" y="45" text-anchor="middle" font-size="12" font-weight="700" fill="#22D3EE">3</text>
+  <text x="343" y="78" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">Generowanie</text>
+  <text x="343" y="98" text-anchor="middle" font-size="11" fill="#BFDBFE">LLM, format JSON</text><line x1="404" y1="79" x2="415" y2="79" stroke="#3B82F6" stroke-width="2.5" marker-end="url(#ar)"/>
+  <rect x="418" y="40" width="118" height="78" rx="14" fill="#EFF6FF" stroke="#3B82F6"/>
+  <circle cx="438" cy="40" r="13" fill="#0A2540"/>
+  <text x="438" y="45" text-anchor="middle" font-size="12" font-weight="700" fill="#22D3EE">4</text>
+  <text x="477" y="78" text-anchor="middle" font-size="14" font-weight="700" fill="#0A2540">Walidacja</text>
+  <text x="477" y="98" text-anchor="middle" font-size="11" fill="#4a5b70">Pydantic</text><line x1="538" y1="79" x2="549" y2="79" stroke="#3B82F6" stroke-width="2.5" marker-end="url(#ar)"/>
+  <rect x="552" y="40" width="118" height="78" rx="14" fill="#F1F5F9" stroke="#94A3B8"/>
+  <circle cx="572" cy="40" r="13" fill="#0A2540"/>
+  <text x="572" y="45" text-anchor="middle" font-size="12" font-weight="700" fill="#22D3EE">5</text>
+  <text x="611" y="78" text-anchor="middle" font-size="14" font-weight="700" fill="#0A2540">Deduplikacja</text>
+  <text x="611" y="98" text-anchor="middle" font-size="11" fill="#4a5b70">podobieństwo ≥ 0,85</text><line x1="672" y1="79" x2="683" y2="79" stroke="#3B82F6" stroke-width="2.5" marker-end="url(#ar)"/>
+  <rect x="686" y="40" width="118" height="78" rx="14" fill="#1D4ED8" stroke="#1D4ED8"/>
+  <circle cx="706" cy="40" r="13" fill="#0A2540"/>
+  <text x="706" y="45" text-anchor="middle" font-size="12" font-weight="700" fill="#22D3EE">6</text>
+  <text x="745" y="78" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">Ocena</text>
+  <text x="745" y="98" text-anchor="middle" font-size="11" fill="#BFDBFE">ten sam model, 1-5</text><line x1="806" y1="79" x2="817" y2="79" stroke="#3B82F6" stroke-width="2.5" marker-end="url(#ar)"/>
+  <rect x="820" y="40" width="118" height="78" rx="14" fill="#ECFEFF" stroke="#22D3EE"/>
+  <circle cx="840" cy="40" r="13" fill="#0A2540"/>
+  <text x="840" y="45" text-anchor="middle" font-size="12" font-weight="700" fill="#22D3EE">7</text>
+  <text x="879" y="78" text-anchor="middle" font-size="14" font-weight="700" fill="#0A2540">Eksport</text>
+  <text x="879" y="98" text-anchor="middle" font-size="11" fill="#4a5b70">Anki · CSV</text>
+  <path d="M761 118 L761 160" stroke="#EF4444" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+  <rect x="686" y="164" width="150" height="56" rx="12" fill="#FEF2F2" stroke="#FCA5A5"/>
+  <text x="761" y="187" text-anchor="middle" font-size="13" font-weight="700" fill="#991B1B">Odrzucone</text>
+  <text x="761" y="205" text-anchor="middle" font-size="11" fill="#7F1D1D">ocena poniżej progu</text>
+  <rect x="852" y="164" width="96" height="56" rx="12" fill="#fff" stroke="#93C5FD" stroke-dasharray="4 3"/>
+  <text x="900" y="187" text-anchor="middle" font-size="12" font-weight="700" fill="#0A2540">Edycja</text>
+  <text x="900" y="205" text-anchor="middle" font-size="11" fill="#4a5b70">w tabeli</text>
+  <line x1="900" y1="164" x2="900" y2="122" stroke="#93C5FD" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+  <g font-size="11.5" fill="#1D4ED8">
+    <rect x="16" y="224" width="12" height="12" rx="3" fill="#1D4ED8"/><text x="34" y="234">wywołanie modelu językowego</text>
+    <rect x="210" y="224" width="12" height="12" rx="3" fill="#F1F5F9" stroke="#94A3B8"/><text x="228" y="234" fill="#4a5b70">czysty Python</text>
+  </g>
+</svg>

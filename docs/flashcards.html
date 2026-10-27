@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ATLAS Flashcards</title>
+  <meta name="description" content="ATLAS Flashcards: fiszki do nauki generowane lokalnym modelem językowym przez Ollamę, z oceną jakości i wyjaśnieniami RAG.">
+  <link rel="icon" href="img/atlas_icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="nav">
+    <a class="brand" href="index.html"><img src="img/atlas_icon.svg" alt="">ATLAS</a>
+    <div class="links">
+      <a href="index.html">Portfolio</a>
+      <a class="active" href="flashcards.html">Flashcards</a>
+      <a href="#architektura">Architektura</a>
+      <a href="#rag">RAG</a>
+      <a href="#start">Uruchomienie</a>
+      <a href="https://github.com/juliuszlosinski/ATLAS/tree/main/Flashcards">GitHub</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <div class="kicker">// ATLAS · projekt 01 · system z jednym agentem</div>
+      <h1>ATLAS: <span class="hl">Flashcards</span></h1>
+      <p class="lead">Aplikacja, która z notatek, artykułu albo pliku .pdf, .docx lub .txt tworzy fiszki do nauki.
+        Wszystko działa lokalnie: model językowy uruchamia Ollama na Twoim komputerze, więc materiały nie trafiają do chmury.</p>
+      <ul class="tags">
+        <li>Python</li><li>Streamlit</li><li>Ollama</li><li>Pydantic</li><li>qwen2.5:3b</li><li>RAG: bge-m3</li>
+      </ul>
+      <a class="btn" href="#start">Uruchom u siebie</a>
+      <a class="btn ghost" href="https://github.com/juliuszlosinski/ATLAS/tree/main/Flashcards">Kod źródłowy</a>
+    </div>
+    <img class="logo" src="img/atlas_icon.svg" alt="Logo ATLAS">
+  </header>
+
+  <section>
+    <div class="shots">
+      <figure class="shot"><img src="img/app_generator.png" alt="Generator fiszek: ustawienia modelu po lewej, pole na tekst po prawej"></figure>
+      <figure class="shot"><img src="img/app_docs.png" alt="Wbudowana dokumentacja systemu z diagramami"></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>Funkcje</h2>
+    <p class="sub">Jeden model językowy pisze fiszki i sam ocenia ich jakość. Słabe są odrzucane, zanim trafią do talii.</p>
+    <div class="grid">
+      <div class="card"><h3>Dowolne materiały</h3><p>Wklejony tekst albo pliki .txt, .docx i .pdf, dzielone na fragmenty.</p></div>
+      <div class="card"><h3>Lokalny model</h3><p>Qwen 2.5 przez Ollamę. Bez kluczy API, bez opłat, działa offline.</p></div>
+      <div class="card"><h3>Kontrola jakości</h3><p>LLM-as-judge ocenia każdą fiszkę w skali 1-5, duplikaty są usuwane.</p></div>
+      <div class="card"><h3>Wyjaśnienia ze źródłami</h3><p>Przycisk Wyjaśnij w trybie nauki wyszukuje fragmenty materiału (RAG) i tłumaczy na ich podstawie.</p></div>
+      <div class="card"><h3>Nauka i eksport</h3><p>Tryb nauki w aplikacji, edycja fiszek w tabeli, eksport do Anki i CSV.</p></div>
+      <div class="card"><h3>Wybór modelu</h3><p>Lista pobranych modeli i katalog do pobrania z rozmiarem, pobieranie z poziomu aplikacji.</p></div>
+    </div>
+  </section>
+
+  <section id="architektura">
+    <h2>Architektura</h2>
+    <p class="sub">Interfejs w Streamlit wywołuje logikę w <code>flashcards.py</code> i <code>rag.py</code>, a te rozmawiają z lokalnym serwerem Ollama.</p>
+    <figure>
+      <div class="diagram"><img src="img/architektura.svg" alt="Diagram architektury systemu"></div>
+      <figcaption>Rys. 1. Architektura: interfejs, logika, RAG i modele uruchamiane przez Ollamę.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Przepływ danych</h2>
+    <p class="sub">Tekst jest dzielony na fragmenty, model tworzy z nich fiszki w formacie JSON zgodnym ze schematem Pydantic,
+      potem następuje deduplikacja, ocena i eksport.</p>
+    <figure>
+      <div class="diagram"><img src="img/przeplyw.svg" alt="Diagram przepływu danych od pliku do eksportu"></div>
+      <figcaption>Rys. 2. Przepływ danych od pliku do eksportu.</figcaption>
+    </figure>
+    <br>
+    <div class="split">
+      <figure>
+        <div class="diagram"><img src="img/sekwencja.svg" alt="Diagram sekwencji wywołań"></div>
+        <figcaption>Rys. 3. Sekwencja wywołań podczas generowania.</figcaption>
+      </figure>
+      <figure>
+        <div class="diagram"><img src="img/model_danych.svg" alt="Model danych: talia, fiszka, ocena"></div>
+        <figcaption>Rys. 4. Model danych: talia zawiera fiszki, a ocena dotyczy pojedynczej fiszki.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="rag">
+    <h2>RAG: wyjaśnienia na podstawie materiału</h2>
+    <p class="sub">RAG (Retrieval-Augmented Generation) to sposób, w którym model przed odpowiedzią dostaje fragmenty
+      Twojego materiału, wyszukane po znaczeniu. Dzięki temu wyjaśnia fiszkę na podstawie źródła, a nie z pamięci, i podaje, z którego fragmentu korzysta.</p>
+    <figure>
+      <div class="diagram"><img src="img/rag.svg" alt="Diagram RAG: indeksowanie materiału i wyjaśnianie fiszki"></div>
+      <figcaption>Rys. 5. Indeksowanie materiału i wyjaśnianie fiszki na podstawie znalezionych fragmentów.</figcaption>
+    </figure>
+    <br>
+    <div class="split">
+      <ul class="check">
+        <li><strong>Indeksowanie:</strong> materiał jest dzielony na fragmenty po ok. 800 znaków, a model <code>bge-m3</code> zamienia każdy na wektor.</li>
+        <li><strong>Wyszukiwanie:</strong> pytanie i odpowiedź z fiszki też stają się wektorem, a podobieństwo cosinusowe wybiera 3 najbliższe fragmenty.</li>
+        <li><strong>Odpowiedź:</strong> model językowy dostaje ponumerowane fragmenty i odpowiada po polsku, powołując się na nie jako [1], [2].</li>
+      </ul>
+      <ul class="check">
+        <li><strong>Zwykły RAG:</strong> wyszukiwanie zawsze, w jednym kroku, według stałego przepisu. Tak działa ten projekt.</li>
+        <li><strong>Agentowy RAG:</strong> model sam decyduje, czy i czego szukać, może szukać kilka razy. To temat kolejnych projektów ATLAS.</li>
+        <li><strong>Indeks w pamięci:</strong> wektory w numpy, bez bazy wektorowej, co wystarcza dla pojedynczego materiału.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Modele</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Model</th><th>Rola</th><th>Rozmiar</th></tr>
+        <tr><td><code>qwen2.5:3b</code></td><td>domyślny model językowy: pisze fiszki, ocenia je i wyjaśnia</td><td>1,9 GB</td></tr>
+        <tr><td><code>qwen2.5:7b</code></td><td>dokładniejszy, wolniejszy; dla mocniejszego sprzętu</td><td>4,7 GB</td></tr>
+        <tr><td><code>bge-m3</code></td><td>model do embeddingów (1024 wymiary), wielojęzyczny, dobrze radzi sobie z polskim</td><td>1,2 GB</td></tr>
+        <tr><td>inne z katalogu</td><td>llama3.2, gemma3, qwen3, mistral, phi4-mini i inne, do pobrania z aplikacji</td><td>1-5 GB</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="start">
+    <h2>Uruchomienie</h2>
+    <p class="sub">Wymagania: Python 3.12 i <a href="https://ollama.com">Ollama</a>.</p>
+<pre><code><span class="c"># 1. kod</span>
+git clone https://github.com/juliuszlosinski/ATLAS.git
+cd ATLAS/Flashcards
+
+<span class="c"># 2. modele (raz): językowy i do embeddingów</span>
+ollama pull qwen2.5:3b
+ollama pull bge-m3
+
+<span class="c"># 3. biblioteki (raz)</span>
+pip install -r requirements.txt
+
+<span class="c"># 4. aplikacja</span>
+python -m streamlit run app.py
+
+<span class="c"># testy (bez modelu, z atrapą)</span>
+python -m unittest discover tests</code></pre>
+  </section>
+
+  <footer>
+    <span>ATLAS Flashcards · część portfolio <a href="index.html">ATLAS</a></span>
+    <span>Juliusz Łosiński · <a href="https://github.com/juliuszlosinski">github.com/juliuszlosinski</a></span>
+  </footer>
+</div>
+</body>
+</html>

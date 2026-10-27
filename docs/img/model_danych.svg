@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 250" font-family="Segoe UI, Arial, sans-serif" role="img" aria-label="Model danych">
+  
+<defs>
+  <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M1 1 L9 5 L1 9 Z" fill="#3B82F6"/>
+  </marker>
+</defs>
+  <g font-family="Consolas, monospace" font-size="13">
+    <!-- Deck -->
+    <rect x="20" y="70" width="230" height="96" rx="14" fill="#fff" stroke="#3B82F6"/>
+    <path d="M20 84 a14 14 0 0 1 14 -14 h202 a14 14 0 0 1 14 14 v20 h-230 Z" fill="#0A2540"/>
+    <text x="36" y="96" font-weight="700" fill="#fff">Deck</text>
+    <text x="36" y="134" fill="#0A2540">flashcards: list[Flashcard]</text>
+
+    <!-- Flashcard -->
+    <rect x="330" y="30" width="330" height="190" rx="14" fill="#fff" stroke="#3B82F6"/>
+    <path d="M330 44 a14 14 0 0 1 14 -14 h302 a14 14 0 0 1 14 14 v20 h-330 Z" fill="#1D4ED8"/>
+    <text x="346" y="56" font-weight="700" fill="#fff">Flashcard</text>
+    <text x="346" y="92" fill="#0A2540">question:<tspan x="446">str</tspan><tspan x="500" fill="#64748B">5-200 znaków</tspan></text>
+    <text x="346" y="120" fill="#0A2540">answer:<tspan x="446">str</tspan><tspan x="500" fill="#64748B">1-300 znaków</tspan></text>
+    <text x="346" y="148" fill="#0A2540">kind:<tspan x="446">Literal</tspan></text>
+    <text x="362" y="166" fill="#64748B" font-size="11.5">definition | fact | concept | example</text>
+    <text x="346" y="194" fill="#0A2540">difficulty:<tspan x="446">Literal</tspan></text>
+    <text x="362" y="212" fill="#64748B" font-size="11.5">easy | medium | hard</text>
+
+    <!-- Review -->
+    <rect x="740" y="70" width="200" height="96" rx="14" fill="#fff" stroke="#22D3EE"/>
+    <path d="M740 84 a14 14 0 0 1 14 -14 h172 a14 14 0 0 1 14 14 v20 h-200 Z" fill="#0E7490"/>
+    <text x="756" y="96" font-weight="700" fill="#fff">Review</text>
+    <text x="756" y="130" fill="#0A2540">score:<tspan x="820">int</tspan><tspan x="854" fill="#64748B">1-5</tspan></text>
+    <text x="756" y="152" fill="#0A2540">reason:<tspan x="820">str</tspan></text>
+  </g>
+  <line x1="250" y1="118" x2="326" y2="118" stroke="#3B82F6" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="288" y="110" text-anchor="middle" font-size="11.5" fill="#1D4ED8">1..*</text>
+  <line x1="736" y1="118" x2="664" y2="118" stroke="#22D3EE" stroke-width="2.5" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+  <text x="700" y="110" text-anchor="middle" font-size="11.5" fill="#0E7490">ocenia</text>
+</svg>

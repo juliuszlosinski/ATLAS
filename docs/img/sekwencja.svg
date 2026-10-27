@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" font-family="Segoe UI, Arial, sans-serif" role="img" aria-label="Sekwencja wywołań">
+  
+<defs>
+  <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M1 1 L9 5 L1 9 Z" fill="#3B82F6"/>
+  </marker>
+</defs>
+  
+  <rect x="50" y="16" width="140" height="38" rx="12" fill="#0A2540"/>
+  <text x="120" y="40" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Użytkownik</text>
+  <line x1="120" y1="54" x2="120" y2="392" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="5 5"/>
+  <rect x="290" y="16" width="140" height="38" rx="12" fill="#0A2540"/>
+  <text x="360" y="40" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Interfejs</text>
+  <line x1="360" y1="54" x2="360" y2="392" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="5 5"/>
+  <rect x="530" y="16" width="140" height="38" rx="12" fill="#0A2540"/>
+  <text x="600" y="40" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">flashcards.py</text>
+  <line x1="600" y1="54" x2="600" y2="392" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="5 5"/>
+  <rect x="770" y="16" width="140" height="38" rx="12" fill="#0A2540"/>
+  <text x="840" y="40" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Ollama</text>
+  <line x1="840" y1="54" x2="840" y2="392" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="5 5"/>
+  <line x1="120" y1="84" x2="354" y2="84" stroke="#2563EB" stroke-width="2.2" marker-end="url(#ar)"/>
+  <text x="237.0" y="77" text-anchor="middle" font-size="11.5" fill="#0A2540">tekst lub plik + „Generuj fiszki”</text>
+  <line x1="360" y1="115" x2="594" y2="115" stroke="#2563EB" stroke-width="2.2" marker-end="url(#ar)"/>
+  <text x="477.0" y="108" text-anchor="middle" font-size="11.5" fill="#0A2540">split_into_chunks(text)</text>
+  <line x1="360" y1="146" x2="594" y2="146" stroke="#2563EB" stroke-width="2.2" marker-end="url(#ar)"/>
+  <text x="477.0" y="139" text-anchor="middle" font-size="11.5" fill="#0A2540">flashcards_from_chunk() × fragment</text>
+  <line x1="600" y1="177" x2="834" y2="177" stroke="#2563EB" stroke-width="2.2" marker-end="url(#ar)"/>
+  <text x="717.0" y="170" text-anchor="middle" font-size="11.5" fill="#0A2540">POST /api/chat (format = schemat Deck)</text>
+  <line x1="840" y1="208" x2="606" y2="208" stroke="#22D3EE" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#ar)"/>
+  <text x="723.0" y="201" text-anchor="middle" font-size="11.5" fill="#0A2540">JSON z fiszkami</text>
+  <line x1="360" y1="239" x2="594" y2="239" stroke="#2563EB" stroke-width="2.2" marker-end="url(#ar)"/>
+  <text x="477.0" y="232" text-anchor="middle" font-size="11.5" fill="#0A2540">deduplicate(), review() × fiszka</text>
+  <line x1="600" y1="270" x2="834" y2="270" stroke="#2563EB" stroke-width="2.2" marker-end="url(#ar)"/>
+  <text x="717.0" y="263" text-anchor="middle" font-size="11.5" fill="#0A2540">POST /api/chat (format = schemat Review)</text>
+  <line x1="840" y1="301" x2="606" y2="301" stroke="#22D3EE" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#ar)"/>
+  <text x="723.0" y="294" text-anchor="middle" font-size="11.5" fill="#0A2540">ocena + uzasadnienie</text>
+  <line x1="360" y1="332" x2="126" y2="332" stroke="#22D3EE" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#ar)"/>
+  <text x="243.0" y="325" text-anchor="middle" font-size="11.5" fill="#0A2540">tabela, metryki, odrzucone</text>
+  <line x1="120" y1="363" x2="354" y2="363" stroke="#2563EB" stroke-width="2.2" marker-end="url(#ar)"/>
+  <text x="237.0" y="356" text-anchor="middle" font-size="11.5" fill="#0A2540">Pobierz dla Anki / CSV</text>
+</svg>

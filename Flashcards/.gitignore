@@ -1,5 +1,10 @@
-/_pycache_
-/.streamlit
-/.venv
-.venv
-.streamlit
+# Python
+__pycache__/
+*.pyc
+
+# virtual environments
+.venv/
+venv/
+
+# Streamlit: config.toml (theme, localhost) belongs in the repo, secrets never do
+.streamlit/secrets.toml
