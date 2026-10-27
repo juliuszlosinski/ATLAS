@@ -1,3 +1,5 @@
+<img src="assets/flashcards_logo.svg" alt="ATLAS Flashcards" width="160" align="right">
+
 # ATLAS: Flashcards
 
 Fiszki do nauki z Twoich materiałów, generowane lokalnym modelem językowym przez [Ollamę](https://ollama.com).
