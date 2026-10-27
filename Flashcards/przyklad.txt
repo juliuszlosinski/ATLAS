@@ -1,0 +1,3 @@
+Ollama to platforma open-source, która umożliwia użytkownikom uruchamianie dużych modeli językowych (LLM) lokalnie, bez konieczności korzystania z usług chmurowych.
+
+To szkolenie prowadzone przez instruktora, na żywo (online lub na miejscu) jest skierowane do profesjonalistów na poziomie podstawowym, którzy chcą zainstalować, skonfigurować i używać Ollamy do uruchamiania modeli AI na swoich lokalnych maszynach.

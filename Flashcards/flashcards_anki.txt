@@ -1,0 +1,5 @@
+#separator:tab
+#html:false
+#deck:ATLAS
+#tags column:3
+Kto jest docelowym kierunkiem szkolenia?	Profesjonali na poziomie podstawowym	definition easy

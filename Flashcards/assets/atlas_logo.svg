@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 640 200" width="640" height="200">
+  <title>ATLAS: cztery agenty w siatce (wersja pozioma)</title>
+  <defs>
+    <pattern id="grids" width="14" height="14" patternUnits="userSpaceOnUse">
+      <path d="M14 0 L0 0 0 14" fill="none" stroke="#DBEAFE" stroke-width="1"/>
+    </pattern>
+    <symbol id="bot" viewBox="0 0 100 90">
+      <line x1="50" y1="18" x2="50" y2="8" stroke="#0A2540" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="50" cy="6" r="6" fill="#22D3EE"/>
+      <rect x="2" y="40" width="10" height="24" rx="4" fill="#1D4ED8"/>
+      <rect x="88" y="40" width="10" height="24" rx="4" fill="#1D4ED8"/>
+      <rect x="10" y="18" width="80" height="68" rx="20" fill="#0A2540"/>
+      <rect x="22" y="38" width="56" height="26" rx="13" fill="#2563EB"/>
+      <circle cx="38" cy="51" r="6" fill="#E0F2FE"/>
+      <circle cx="62" cy="51" r="6" fill="#E0F2FE"/>
+    </symbol>
+  </defs>
+  <rect x="14" y="14" width="172" height="172" rx="22" fill="url(#grids)" stroke="#BFDBFE" stroke-width="2"/>
+  <g stroke="#60A5FA" stroke-width="4" stroke-linecap="round">
+    <line x1="60" y1="62" x2="140" y2="62"/><line x1="60" y1="140" x2="140" y2="140"/>
+    <line x1="60" y1="62" x2="60" y2="140"/><line x1="140" y1="62" x2="140" y2="140"/>
+  </g>
+  <use xlink:href="#bot" href="#bot" x="30" y="35" width="60" height="54"/>
+  <use xlink:href="#bot" href="#bot" x="110" y="35" width="60" height="54"/>
+  <use xlink:href="#bot" href="#bot" x="30" y="113" width="60" height="54"/>
+  <use xlink:href="#bot" href="#bot" x="110" y="113" width="60" height="54"/>
+  <text x="214" y="112" font-family="Consolas, 'Cascadia Code', monospace" font-size="84" font-weight="700" fill="#0A2540">ATLAS</text>
+  <text x="217" y="148" font-family="Consolas, 'Cascadia Code', monospace" font-size="18" fill="#60A5FA">// <tspan fill="#1D4ED8" font-weight="700">A</tspan>gents <tspan fill="#1D4ED8" font-weight="700">T</tspan>hat <tspan fill="#1D4ED8" font-weight="700">L</tspan>earn, <tspan fill="#1D4ED8" font-weight="700">A</tspan>ct &amp; <tspan fill="#1D4ED8" font-weight="700">S</tspan>olve</text>
+</svg>
