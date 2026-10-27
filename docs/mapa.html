@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mapa projektów ATLAS</title>
+  <meta name="description" content="Mapa projektów ATLAS: co jest gotowe, nad czym trwa praca i co jest zaplanowane, od RAG po agentów w produkcji.">
+  <link rel="icon" href="img/atlas_icon.svg" type="image/svg+xml">
+  <!-- link preview (LinkedIn, Facebook, Messenger, X) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ATLAS">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="Mapa projektów ATLAS">
+  <meta property="og:description" content="Osiem projektów z LLM, RAG i agentami AI: co jest gotowe, a co w drodze.">
+  <meta property="og:url" content="https://juliuszlosinski.github.io/ATLAS/mapa.html">
+  <meta property="og:image" content="https://juliuszlosinski.github.io/ATLAS/img/og_atlas.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mapa projektów ATLAS">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://juliuszlosinski.github.io/ATLAS/mapa.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="nav">
+    <a class="brand" href="index.html"><img src="img/atlas_icon.svg" alt="">ATLAS</a>
+    <div class="links">
+      <a class="home" href="index.html">Portfolio</a>
+      <a class="active" href="mapa.html">Mapa</a>
+      <a href="flashcards.html">Flashcards</a>
+      <a href="https://github.com/juliuszlosinski/ATLAS">GitHub</a>
+    </div>
+  </nav>
+
+  <header class="rm-console">
+    <div class="rm-ring" role="img" aria-label="Postęp: 13% mapy">
+      <svg viewBox="0 0 150 150" aria-hidden="true">
+        <defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3B82F6"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs>
+        <circle class="track" cx="75" cy="75" r="62"/>
+        <circle class="bar" cx="75" cy="75" r="62" stroke-dasharray="389.6" stroke-dashoffset="342.8"/>
+      </svg>
+      <div class="rm-pct"><b>13%</b><span>MAPY</span></div>
+    </div>
+    <div>
+      <div class="kicker">// ATLAS · mapa projektów</div>
+      <h1 class="rm-title">Od pierwszego agenta do <span class="hl">produkcji</span></h1>
+      <p class="lead">Osiem projektów, które po kolei budują umiejętności z modeli językowych, RAG, agentów
+        i modeli multimodalnych. Każdy przechodzi te same cztery kroki: architektura, prototyp, ewaluacja i publikacja.</p>
+      <ul class="tags">
+        <li>projekty 1/8</li><li>kroki 4/32</li><li>w trakcie: ATLAS Scholar</li>
+      </ul>
+      <div class="rm-next"><span class="kicker">Teraz</span> <a href="#p02">ATLAS Scholar: Architektura i diagram</a></div>
+    </div>
+  </header>
+
+  <section>
+    <ul class="rm-legend" aria-label="Legenda">
+      <li class="done">ukończony</li><li class="current">w trakcie</li><li>planowany</li>
+    </ul>
+    <div class="rm-route">
+      <div class="rm-phase"><h3>Start</h3><p>Pierwszy agent i zwykły RAG</p></div>
+      <article class="rm-station done left" id="p01">
+        <div class="rm-node" aria-hidden="true">✓</div>
+        <div class="card rm-card">
+          <header><h3><a href="flashcards.html">ATLAS Flashcards</a></h3><span class="rm-tag">01 · ukończony</span></header>
+          <p class="rm-skill">LLM, structured output, zwykły RAG</p>
+          <ul class="tags"><li>Ollama</li><li>Pydantic</li><li>Streamlit</li><li>bge-m3</li></ul>
+          <p class="rm-wow">Fiszki z oceną LLM-as-judge i wyjaśnieniami ze źródłami.</p>
+          <ul class="rm-steps" aria-label="Kroki: 4 z 4">
+            <li class="ok">Architektura i diagram</li>
+            <li class="ok">Działający prototyp</li>
+            <li class="ok">Testy i liczby z ewaluacji</li>
+            <li class="ok">README, demo i strona</li>
+          </ul>
+          <div class="rm-meter"><i style="width:100%"></i></div>
+        </div>
+      </article>
+      <div class="rm-phase"><h3>Etap 1: agenci</h3><p>Agentowy RAG, narzędzia i współpraca agentów</p></div>
+      <article class="rm-station current right" id="p02">
+        <div class="rm-node" aria-hidden="true">02</div>
+        <div class="card rm-card">
+          <header><h3>ATLAS Scholar</h3><span class="rm-tag">02 · w trakcie</span></header>
+          <p class="rm-skill">Agentowy RAG po dokumentach PDF</p>
+          <ul class="tags"><li>LangGraph</li><li>Qdrant</li><li>BM25 + wektory</li><li>RAGAS</li></ul>
+          <p class="rm-wow">Tabela: zwykły RAG a agentowy RAG, z liczbami z RAGAS.</p>
+          <ul class="rm-steps" aria-label="Kroki: 0 z 4">
+            <li class="">Architektura i diagram</li>
+            <li class="">Działający prototyp</li>
+            <li class="">Testy i liczby z ewaluacji</li>
+            <li class="">README, demo i strona</li>
+          </ul>
+          <div class="rm-meter"><i style="width:0%"></i></div>
+        </div>
+      </article>
+      <article class="rm-station  left" id="p03">
+        <div class="rm-node" aria-hidden="true">03</div>
+        <div class="card rm-card">
+          <header><h3>ATLAS Toolsmith</h3><span class="rm-tag">03 · planowany</span></header>
+          <p class="rm-skill">Agent z narzędziami i pamięcią, MCP</p>
+          <ul class="tags"><li>MCP</li><li>LangGraph</li><li>FastAPI</li><li>human-in-the-loop</li></ul>
+          <p class="rm-wow">Ten sam serwer MCP działa z własnym agentem i z gotowym klientem.</p>
+          <ul class="rm-steps" aria-label="Kroki: 0 z 4">
+            <li class="">Architektura i diagram</li>
+            <li class="">Działający prototyp</li>
+            <li class="">Testy i liczby z ewaluacji</li>
+            <li class="">README, demo i strona</li>
+          </ul>
+          <div class="rm-meter"><i style="width:0%"></i></div>
+        </div>
+      </article>
+      <div class="rm-phase"><h3>Etap 2: multimodalność</h3><p>Obraz i głos</p></div>
+      <article class="rm-station  right" id="p04">
+        <div class="rm-node" aria-hidden="true">04</div>
+        <div class="card rm-card">
+          <header><h3>ATLAS Vision</h3><span class="rm-tag">04 · planowany</span></header>
+          <p class="rm-skill">Multimodalny RAG: skany, slajdy, wykresy</p>
+          <ul class="tags"><li>Qwen2.5-VL</li><li>ColPali / CLIP</li><li>Qdrant</li></ul>
+          <p class="rm-wow">Odpowiedź z podglądem strony, z której pochodzi.</p>
+          <ul class="rm-steps" aria-label="Kroki: 0 z 4">
+            <li class="">Architektura i diagram</li>
+            <li class="">Działający prototyp</li>
+            <li class="">Testy i liczby z ewaluacji</li>
+            <li class="">README, demo i strona</li>
+          </ul>
+          <div class="rm-meter"><i style="width:0%"></i></div>
+        </div>
+      </article>
+      <article class="rm-station  left" id="p05">
+        <div class="rm-node" aria-hidden="true">05</div>
+        <div class="card rm-card">
+          <header><h3>ATLAS Voice</h3><span class="rm-tag">05 · planowany</span></header>
+          <p class="rm-skill">Agent głosowy</p>
+          <ul class="tags"><li>faster-whisper</li><li>Piper / Kokoro</li><li>WebSocket</li></ul>
+          <p class="rm-wow">Demo rozmowy na żywo z pomiarem opóźnienia.</p>
+          <ul class="rm-steps" aria-label="Kroki: 0 z 4">
+            <li class="">Architektura i diagram</li>
+            <li class="">Działający prototyp</li>
+            <li class="">Testy i liczby z ewaluacji</li>
+            <li class="">README, demo i strona</li>
+          </ul>
+          <div class="rm-meter"><i style="width:0%"></i></div>
+        </div>
+      </article>
+      <article class="rm-station  right" id="p06">
+        <div class="rm-node" aria-hidden="true">06</div>
+        <div class="card rm-card">
+          <header><h3>ATLAS Crew</h3><span class="rm-tag">06 · planowany</span></header>
+          <p class="rm-skill">System wieloagentowy</p>
+          <ul class="tags"><li>CrewAI</li><li>AutoGen</li><li>LangGraph</li></ul>
+          <p class="rm-wow">Porównanie frameworków: jakość, czas, liczba wywołań.</p>
+          <ul class="rm-steps" aria-label="Kroki: 0 z 4">
+            <li class="">Architektura i diagram</li>
+            <li class="">Działający prototyp</li>
+            <li class="">Testy i liczby z ewaluacji</li>
+            <li class="">README, demo i strona</li>
+          </ul>
+          <div class="rm-meter"><i style="width:0%"></i></div>
+        </div>
+      </article>
+      <div class="rm-phase"><h3>Etap 3: produkcja</h3><p>Dane, wdrożenie i monitoring</p></div>
+      <article class="rm-station  left" id="p07">
+        <div class="rm-node" aria-hidden="true">07</div>
+        <div class="card rm-card">
+          <header><h3>ATLAS Analyst</h3><span class="rm-tag">07 · planowany</span></header>
+          <p class="rm-skill">Agent do danych: SQL i wykresy</p>
+          <ul class="tags"><li>DuckDB</li><li>LangGraph</li><li>sandbox</li><li>Plotly</li></ul>
+          <p class="rm-wow">Agent sam poprawia błędne zapytania SQL.</p>
+          <ul class="rm-steps" aria-label="Kroki: 0 z 4">
+            <li class="">Architektura i diagram</li>
+            <li class="">Działający prototyp</li>
+            <li class="">Testy i liczby z ewaluacji</li>
+            <li class="">README, demo i strona</li>
+          </ul>
+          <div class="rm-meter"><i style="width:0%"></i></div>
+        </div>
+      </article>
+      <article class="rm-station  right" id="p08">
+        <div class="rm-node" aria-hidden="true">08</div>
+        <div class="card rm-card">
+          <header><h3>ATLAS Ops</h3><span class="rm-tag">08 · planowany</span></header>
+          <p class="rm-skill">Agent gotowy na produkcję</p>
+          <ul class="tags"><li>FastAPI</li><li>Docker</li><li>vLLM</li><li>Langfuse</li><li>CI</li></ul>
+          <p class="rm-wow">Ewaluacja w CI i monitoring kosztów każdego wywołania.</p>
+          <ul class="rm-steps" aria-label="Kroki: 0 z 4">
+            <li class="">Architektura i diagram</li>
+            <li class="">Działający prototyp</li>
+            <li class="">Testy i liczby z ewaluacji</li>
+            <li class="">README, demo i strona</li>
+          </ul>
+          <div class="rm-meter"><i style="width:0%"></i></div>
+        </div>
+      </article>
+      <div class="rm-phase rm-finish"><h3>Meta: portfolio AI Engineer</h3><p>RAG, agenci, multimodalność i wdrożenie w jednym portfolio.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>ATLAS · Agents That Learn, Act &amp; Solve</span>
+    <span>Juliusz Łosiński · <a href="https://github.com/juliuszlosinski">github.com/juliuszlosinski</a></span>
+  </footer>
+</div>
+</body>
+</html>

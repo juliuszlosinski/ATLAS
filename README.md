@@ -5,7 +5,7 @@
 <h1 align="center">ATLAS</h1>
 <p align="center"><b>Agents That Learn, Act &amp; Solve</b></p>
 <p align="center">Portfolio projektów z modelami językowymi, modelami multimodalnymi i agentami AI.</p>
-<p align="center"><a href="https://juliuszlosinski.github.io/ATLAS/">Strona projektu</a></p>
+<p align="center"><a href="https://juliuszlosinski.github.io/ATLAS/">Strona projektu</a> · <a href="https://juliuszlosinski.github.io/ATLAS/mapa.html">Mapa projektów</a></p>
 
 ---
 
