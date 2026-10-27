@@ -6,6 +6,19 @@
   <title>ATLAS - Agents That Learn, Act &amp; Solve</title>
   <meta name="description" content="ATLAS: portfolio projektów z modelami językowymi, modelami multimodalnymi i agentami AI.">
   <link rel="icon" href="img/atlas_icon.svg" type="image/svg+xml">
+  <!-- link preview (LinkedIn, Facebook, Messenger, X) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ATLAS">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="ATLAS - Agents That Learn, Act &amp; Solve">
+  <meta property="og:description" content="Portfolio projektów z modelami językowymi, RAG i agentami AI.">
+  <meta property="og:url" content="https://juliuszlosinski.github.io/ATLAS/">
+  <meta property="og:image" content="https://juliuszlosinski.github.io/ATLAS/img/og_atlas.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ATLAS - Agents That Learn, Act &amp; Solve">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://juliuszlosinski.github.io/ATLAS/">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -39,24 +52,27 @@
   <section id="projekty">
     <h2>Projekty</h2>
     <p class="sub">Każdy projekt to osobny folder w repozytorium, z kodem, testami i instrukcją uruchomienia.</p>
-    <div class="grid">
+    <div class="projects">
       <a class="card project" href="flashcards.html">
-        <img src="img/app_generator.png" alt="Zrzut ekranu aplikacji ATLAS Flashcards">
-        <img src="img/flashcards_logo.svg" alt="Logo ATLAS Flashcards: stos fiszek z robotem">
-        <h3>ATLAS Flashcards</h3>
+        <img class="screenshot" src="img/app_generator.png" alt="Zrzut ekranu aplikacji ATLAS Flashcards">
+        <div class="title-logo">
+          <img src="img/flashcards_logo.svg" alt="">
+          <div>
+            <h3>ATLAS Flashcards</h3>
+            <span class="status">● gotowy · projekt 01</span>
+          </div>
+        </div>
         <p>Fiszki do nauki z własnych materiałów, generowane lokalnym modelem Qwen 2.5 przez Ollamę.
           Ocena jakości przez LLM-as-judge, wyjaśnienia z RAG, eksport do Anki.</p>
-        <span class="status">● gotowy</span>
       </a>
       <div class="card project soon">
-        <h3>Kolejny agent</h3>
-        <p>Agent korzystający z narzędzi (tool calling) i pamięci. Szczegóły wkrótce.</p>
         <span class="status">○ w przygotowaniu</span>
-      </div>
-      <div class="card project soon">
-        <h3>System wieloagentowy</h3>
-        <p>Kilku współpracujących agentów z orkiestracją. Szczegóły wkrótce.</p>
-        <span class="status">○ w przygotowaniu</span>
+        <h3>Następne w ATLAS</h3>
+        <ul class="check">
+          <li><strong>Agent z narzędziami:</strong> tool calling i pamięć rozmowy.</li>
+          <li><strong>System wieloagentowy:</strong> kilku współpracujących agentów z orkiestracją.</li>
+          <li><strong>Model multimodalny:</strong> praca z obrazem i tekstem.</li>
+        </ul>
       </div>
     </div>
   </section>

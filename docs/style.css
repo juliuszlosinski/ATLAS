@@ -114,11 +114,16 @@ h3 { margin: 0 0 6px; font-size: 18px; }
 .card .num { font-family: Consolas, monospace; color: var(--accent-2); font-size: 13px; }
 
 /* project cards on the portfolio page */
-.project { display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: var(--text); transition: transform .2s, border-color .2s; }
-.project:hover { transform: translateY(-3px); border-color: rgba(96, 165, 250, .6); }
-.project img { width: 100%; border-radius: 10px; border: 1px solid var(--line); }
-.project .status { font-size: 12px; font-family: Consolas, monospace; color: #86EFAC; margin-top: auto; padding-top: 6px; }
-.project.soon { opacity: .6; border-style: dashed; }
+.projects { display: grid; gap: 18px; grid-template-columns: 1.6fr 1fr; align-items: start; }
+.project { display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--text); transition: transform .2s, border-color .2s; }
+a.project:hover { transform: translateY(-3px); border-color: rgba(96, 165, 250, .6); }
+.project .screenshot { width: 100%; border-radius: 10px; border: 1px solid var(--line); }
+.project .title-logo { display: flex; align-items: center; gap: 14px; }
+.project .title-logo img { width: 56px; height: 56px; border-radius: 12px; flex: none; }
+.project .title-logo h3 { margin: 0; }
+.project .status { font-size: 12px; font-family: Consolas, monospace; color: #86EFAC; }
+.project.soon { border-style: dashed; }
+.project.soon h3 { margin: 0; }
 .project.soon .status { color: var(--muted); }
 
 /* screenshots and diagrams */
@@ -154,7 +159,7 @@ ul.check strong { color: var(--text); }
 footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 26px 0 40px; color: var(--muted); font-size: 14px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 
 @media (max-width: 820px) {
-  .hero, .split, .shots { grid-template-columns: 1fr; }
+  .hero, .split, .shots, .projects { grid-template-columns: 1fr; }
   .hero { padding-top: 24px; }
   .hero .logo { max-width: 240px; }
   .nav { flex-direction: column; align-items: flex-start; }
