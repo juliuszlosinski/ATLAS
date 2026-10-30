@@ -5,7 +5,7 @@
 Fiszki do nauki z Twoich materiałów, generowane lokalnym modelem językowym przez [Ollamę](https://ollama.com).
 System z jednym agentem: ten sam model pisze fiszki, ocenia ich jakość i wyjaśnia je na podstawie materiału (RAG).
 
-Strona projektu: <https://juliuszlosinski.github.io/ATLAS/flashcards.html>
+Strona projektu: <https://atlas.juliuszlosinski.com/flashcards.html>
 
 ![Generator fiszek](../docs/img/app_generator.png)
 
